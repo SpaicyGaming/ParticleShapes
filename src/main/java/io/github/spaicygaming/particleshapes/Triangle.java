@@ -38,7 +38,7 @@ public class Triangle {
 
     /**
      * Class constructor.
-     * All three vertexes must be in the same world. This class assumes the given vertexes respect this prerequisite.
+     * All three vertices must be in the same world. This class assumes the given vertices respect this prerequisite.
      *
      * @param vertexA a triangle vertex
      * @param vertexB a triangle vertex
@@ -69,7 +69,7 @@ public class Triangle {
             throw new IllegalArgumentException("The given vertex location is in a different world than the others");
         }
 
-        // Return a new triangle instance with the updated vertexes
+        // Return a new triangle instance with the updated vertices
         return new Triangle(vertexB, vertexC, vertexLocation);
     }
 
@@ -82,9 +82,9 @@ public class Triangle {
     }
 
     /**
-     * @return true if the Triangle has all 3 vertexes
+     * @return true if the Triangle has all 3 vertices
      */
-    public boolean hasAllVertexes() {
+    public boolean hasAllVertices() {
         return vertexA != null && vertexB != null && vertexC != null;
     }
 
@@ -108,7 +108,7 @@ public class Triangle {
      * @return true if the triangle was drawn with success
      */
     public boolean draw() {
-        if (!hasAllVertexes())
+        if (!hasAllVertices())
             return false;
 
         drawingTask = Bukkit.getScheduler().runTaskTimerAsynchronously(ParticleShapesPlugin.getInstance(), () -> {

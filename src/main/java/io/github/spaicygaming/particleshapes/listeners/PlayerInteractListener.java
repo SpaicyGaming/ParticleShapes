@@ -47,7 +47,7 @@ public class PlayerInteractListener implements Listener {
         //noinspection ConstantConditions
         Location clickedLocation = event.getClickedBlock().getLocation();
 
-        // todo add config option to set max vertexes distance
+        // todo add config option to set max vertices distance
 
         Player player = event.getPlayer();
         Optional<Triangle> triangleOptional = handleVertexRegistration(player, clickedLocation);
