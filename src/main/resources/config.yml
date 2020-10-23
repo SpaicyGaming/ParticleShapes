@@ -1,0 +1,17 @@
+gadget-item:
+  material: STICK
+  display-name: "&3Triangles Gadget"
+  lore:
+    - ""
+    - "&7Click a block to set a &bVertex"
+
+messages:
+  chat-prefix: "&3ParticleShapes &8» &7"
+  vertex-set-success: "&aYou set a new vertex &7({x},{y},{z})"
+  vertex-set-already: "&cThis point is already a vertex of the triangle"
+  vertex-different-world: "&cThis vertex is in a different world. "
+  triangle-drawn: "&aTriangle drawn with success. &7Execute '/triangle togglefill' to toggle the area"
+  triangle-drawn-first: "&cDraw a triangle first!"
+  triangle-fill-toggled: "&aTriangle fill state toggled"
+  cmd-players-only: "&cOnly players can execute this command"
+  cmd-get-gadget-success: "&aYou received the gadget item!"

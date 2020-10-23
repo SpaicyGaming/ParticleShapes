@@ -1,0 +1,11 @@
+main: io.github.spaicygaming.particleshapes.ParticleShapesPlugin
+
+name: ${project.name}
+version: ${project.version}
+
+author: SpaicyGaming
+
+commands:
+  triangle:
+    description: Get the gadget item
+    aliases: [ trianglegadget, particleshapes ]
