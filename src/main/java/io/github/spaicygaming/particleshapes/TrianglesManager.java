@@ -10,7 +10,6 @@ import java.util.UUID;
  */
 public class TrianglesManager {
 
-    // todo remove on player quit
     private final Map<UUID, Triangle> triangles = new HashMap<>();
 
     /**
@@ -24,13 +23,25 @@ public class TrianglesManager {
     }
 
     /**
-     * Associate a triangle to a player
+     * Associates a triangle to a player
      *
      * @param playerUuid the uuid of the player
      * @param triangle   the triangle
      */
     public void setTriangle(UUID playerUuid, Triangle triangle) {
         triangles.put(playerUuid, triangle);
+    }
+
+    /**
+     * Removes the triangle drawing (if exists) and delete its reference to the player.
+     *
+     * @param playerUuid the uuid of the player who drew the triangle
+     */
+    public void removeTriangle(UUID playerUuid) {
+        if (triangles.containsKey(playerUuid)) {
+            triangles.get(playerUuid).stopDrawing();
+            triangles.remove(playerUuid);
+        }
     }
 
 }

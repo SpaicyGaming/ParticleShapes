@@ -2,6 +2,7 @@ package io.github.spaicygaming.particleshapes;
 
 import io.github.spaicygaming.particleshapes.commands.TriangleCommand;
 import io.github.spaicygaming.particleshapes.listeners.PlayerInteractListener;
+import io.github.spaicygaming.particleshapes.listeners.PlayerQuitListener;
 import io.github.spaicygaming.particleshapes.util.Color;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
@@ -36,8 +37,9 @@ public class ParticleShapesPlugin extends JavaPlugin {
         // Register the command
         getCommand("triangle").setExecutor(new TriangleCommand(gadgetItemStack, trianglesManager));
 
-        // Register listener(s)
+        // Register listeners
         getServer().getPluginManager().registerEvents(new PlayerInteractListener(gadgetItemStack, trianglesManager), this);
+        getServer().getPluginManager().registerEvents(new PlayerQuitListener(trianglesManager), this);
 
         getLogger().info("Plugin enabled :)");
     }
