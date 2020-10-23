@@ -16,7 +16,7 @@ public class ParticleShapesPlugin extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        getLogger().info("Plugin enabled :)");
+        getLogger().info("Plugin disabled");
     }
 
     @SuppressWarnings("ConstantConditions")
